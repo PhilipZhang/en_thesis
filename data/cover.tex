@@ -1,0 +1,75 @@
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
+%\secretlevel{保密} \secretyear{2}
+
+\ctitle{基于图像的轻量化3D树木建模方法\\ [2ex] \begin{large} \raisebox{0.5mm}{------}PyrLK光流法树木重建解决方案的增强与优化 \end{large}}
+
+% 按照申请工学学位设计。如有其它需要，请修改相应文字。
+\makeatletter
+  \iftongji@doctor
+    \cdegree{工学博士}
+  \else
+    \iftongji@master
+      \cdegree{毕业设计(论文)}
+    \fi
+  \fi
+
+\makeatother
+
+\cdepartment{软件学院}
+
+\cmajorfirst{软件工程}
+
+\cmajorsecond{软件工程}
+
+\cauthor{张德嘉}
+
+\snumber{092792}
+
+\csupervisor{贾金原}
+
+% 如果没有副指导老师或者联合指导老师，把各自{}中内容留空即可。
+
+\cassosupervisor{}
+
+\ccosupervisor{}
+
+% 定义中英文摘要和关键字
+\begin{cabstract}
+随着当今WebVR、WebGame、WebGIS等基于Web的应用迅猛发展，为了适应网络传输以及用户日益增长的对图形效果的追求，真实感与轻量化
+之间的矛盾日益激化。为了解决这个矛盾，本课题提出了一套高效、低成本的分级轻量化树木建模方法。它以改进的三维重建算法为基础，
+进行基于用户交互地自动化骨架抽取，并根据应用需求，可进行分级的轻量化。这种分级轻量化方法可以进一步被扩展为自适应网络带宽
+或用户硬件条件的树木模型生成方法。
+
+为了实现高效的分级轻量化建模方法，本文首先将PyrLK光流法进行基于仿射变换和反向追踪的改进，并且将其运用到三维重建
+的特征点匹配步骤中，以提高树木特征点的匹配率和稳定性。然后进行GPU加速的三维重建以得到高精度点云模型。接着本文
+运用三维体素泛洪和最小二乘线性拟合的方法对树木骨架和半径信息进行抽取，以适应树木生长规律的方法抽取出了准确的骨架。
+对于算法的主观性和可能造成的二义性，本文又提出了基于用户指引的算法补全措施，以进一步提高建模的准确性和鲁棒性。
+然后本文提出了根据应用对轻量化的需求等级，对骨架进行纵向和横向的合并，以减小骨架的尺寸来实现轻量化，从而更好地适应
+面向网络的应用的需求。最后本文还给出了一套完整的基于图像树木建模的质量评价，提出了还原度的概念来客观、量化地评价建模出
+的模型的还原度以及在轻量化过程中质量的丢失。
+\end{cabstract}
+
+\ckeywords{基于图像三维重建， 树木建模， 轻量化模型，PyrLK光流法，骨架抽取}
+
+\begin{eabstract}
+As the Web-oriented applications(WebVR, WebGame,
+WebGIS, etc) develop rapidly and the persuit of graphics effect boosts quickly, the lightweight and realism of tree modeling are badly
+needed nowadays. In order to solve the contradiction between lightweight and realism, this article proposes a high-efficiency、low-cost and
+multi-level lightweight tree modeling method. Based on the improved 3D reconstruction methods, it conducts a user-sketch automatic skeleton 
+extraction. And it uses multi-level lightweight method to meet the applications' needs, which can be improved to automatically fit the 
+bandwidth and hardware conditions of the client side.
+
+For implementing the lightweight method, we first improve the traditional PyrLK optical flow method to support affine transformation
+and backward feature tracking, which can furthur be applied to do feature matching in gpu accelerated 3D reconstruction and 
+improve the match ratio. Then we use flooding algorithm in 3D voxel model and least squares method to discover the tree skeleton and
+its radius information. In order to improve the accuracy and robustness of the algorithms, this article suggests a few use sketches.
+And according to the lightweight level the applications require, we reduce the model size by merging the
+branches vertically and horizontally respectively. At last we propose a modeling quality evaluation method, which will objectively and 
+quantizedly evaluate the restore degree of the tree model.
+\end{eabstract}
+
+\ekeywords{Image-based 3D Reconstrction, Tree Modeling, Light-weight Modeling, PyrLK Optical Flow, Skeleton Extraction}
